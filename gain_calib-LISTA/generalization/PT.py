@@ -302,6 +302,22 @@ def run_experiment(learning_rate, numEpochs, numLayers, batch_size):
     seed = 80
     np.random.seed(seed)
     torch.manual_seed(42)
+    
+    ## For Structured Gain
+    # t = np.linspace(1, 10, m, endpoint=False)  # Time vector
+    # S = np.zeros((m,J))
+    # for i in range(J):
+    #     freq = np.random.uniform(low=0.5, high=1, size=(1,))
+    #     phase_shift =  np.random.rand(1)
+    #     sine_vector = 0.6 + 0.5 * np.sin(freq * t + phase_shift)
+    #     S[:, i] = sine_vector
+    
+    # # Matrix multiplication
+    # PHI = S          # Result shape (30, 25)
+    # # np.save(os.path.join(save_path, "Struct_Gain_Gener_50.npy"), PHI)
+    datagenerator = datagen(n,m,sparsity)
+    X = datagenerator.generate_sparse_signal(numTrain)
+    np.save(os.path.join(save_path, "X_Generalization_big.npy"), X) # Save the big .npy file
     A = np.load("A.npy")
     X = np.load("X_Generalization_big.npy")
     PHI = np.load("Struct_Gain_Gener_50.npy")
