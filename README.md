@@ -29,6 +29,7 @@ Our methods include:
 
 ### Main Directories
 This repository is organized into two main application modules for tunable domain adaptation using unrolled networks:
+'''
 TDA-Unfolding/
 ├── gain_calib-LISTA/ # Domain-adaptive gain calibration using LISTA-based models
 │ ├── *.py, *.npy # Core scripts and data for different calibration strategies (JT, PT, PTDA, DDTDA)
@@ -43,7 +44,7 @@ TDA-Unfolding/
 ├── broad_SNR/ # Test data covering broad SNR variations
 ├── narrow_SNR/ # Test data with narrow SNR variations
 └── generalization/ # Extended test data for generalization across SNR regimes
-
+'''
 Each module contains:
 - `.py` scripts implementing model variants.
 - `.npy` files for matrices and datasets.
