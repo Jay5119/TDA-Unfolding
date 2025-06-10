@@ -49,8 +49,3 @@ Each module contains:
 - `.py` scripts implementing model variants.
 - `.npy` files for matrices and datasets.
 - Subdirectories with test and generalization data to evaluate robustness.
-
-
-## Citation  
-If you use this work, please cite:
-
