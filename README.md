@@ -28,26 +28,26 @@ Our methods include:
 | `*_test.npy` files    | Test datasets (inputs and outputs) for various domains                      |
 
 ### Main Directories
-| Directory              | Contents                                                                     | Key Files                                                                 |
-|------------------------|------------------------------------------------------------------------------|---------------------------------------------------------------------------|
-| **gain_calib-LISTA**   | Gain calibration experiments                                                 | |
-| ├─ generalization      | Cross-domain generalization tests                                            | `DDTDA.py`, `PTDA.py`, `net_*.pth` models                                |
-| ├─ random              | Test data for random gain perturbations                                      | `X/Y{1,2,3}_test.npy`                                                    |
-| ├─ struc               | Test data for structured gain patterns                                       | `X/Y{1,2,3}_test.npy`                                                    |
-| └─ *root*              | Core calibration scripts                                                     | `wiener_*_calibration_*.py` (JT/PT/P-TDA/DD-TDA implementations)         |
-| **NA-LISTA**           | Noise-adaptive LISTA experiments                                             | |
-| ├─ broad_SNR           | Test data for wide SNR ranges (20-50 dB)                                     | `X/Y{1,2,3}_test.npy`                                                    |
-| ├─ narrow_SNR          | Test data for narrow SNR ranges (35-38 dB)                                   | `X/Y{1,2,3}_test.npy`                                                    |
-| ├─ generalization      | Multi-domain test sets (6 domains)                                           | `X/Y{1-6}_test.npy`                                                      |
-| └─ *root*              | Adaptation method implementations                                            | `JT.py`, `PT.py`, `PTDA.py`, `DDTDA.py`                                   |
+This repository is organized into two main application modules for tunable domain adaptation using unrolled networks:
+TDA-Unfolding/
+├── gain_calib-LISTA/           # Domain-adaptive gain calibration using LISTA-based models
+│   ├── *.py, *.npy             # Core scripts and data for different calibration strategies (JT, PT, PTDA, DDTDA)
+│   ├── generalization/         # Experiments for generalization across unseen gain conditions
+│   │   ├── *.py, *.npy         # Models and data for generalization testing
+│   │   └── Results/            # Pretrained weights and visualizations for structured/random gains
+│   ├── random/                 # Test data with random gain configurations
+│   └── struc/                  # Test data with structured gain configurations
+│
+└── NA-LISTA/                   # Noise-adaptive sparse recovery via LISTA
+    ├── *.py, *.npy             # Core scripts and data for JT, PT, PTDA, DDTDA models
+    ├── broad_SNR/              # Test data covering broad SNR variations
+    ├── narrow_SNR/             # Test data with narrow SNR variations
+    └── generalization/         # Extended test data for generalization across SNR regimes
 
-### Scripts Overview
-| Experiment Type        | Training Scripts                                      | Adaptation Methods                          |
-|------------------------|-------------------------------------------------------|---------------------------------------------|
-| **Gain Calibration**   | `wiener_normal_gain_calibration_jt.py` (Joint)        | `wiener_tunable_gain_calibration_ptda.py` (P-TDA) |
-|                        | `wiener_normal_gain_calibration_pt1.py` (Personalized)| `wiener_tunable_gain_calibration_ddtda.py` (DD-TDA)|
-| **Noise Adaptation**   | `JT.py` (Joint Training)                              | `PTDA.py` (Parametric TDA)                  |
-|                        | `PT.py` (Personalized Training)                       | `DDTDA.py` (Data-Driven TDA)                |
+Each module contains:
+- `.py` scripts implementing model variants.
+- `.npy` files for matrices and datasets.
+- Subdirectories with test and generalization data to evaluate robustness.
 
 
 ## Citation  
