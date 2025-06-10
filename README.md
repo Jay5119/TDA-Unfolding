@@ -30,19 +30,19 @@ Our methods include:
 ### Main Directories
 This repository is organized into two main application modules for tunable domain adaptation using unrolled networks:
 TDA-Unfolding/
-├── gain_calib-LISTA/           # Domain-adaptive gain calibration using LISTA-based models
-│   ├── *.py, *.npy             # Core scripts and data for different calibration strategies (JT, PT, PTDA, DDTDA)
-│   ├── generalization/         # Experiments for generalization across unseen gain conditions
-│   │   ├── *.py, *.npy         # Models and data for generalization testing
-│   │   └── Results/            # Pretrained weights and visualizations for structured/random gains
-│   ├── random/                 # Test data with random gain configurations
-│   └── struc/                  # Test data with structured gain configurations
+├── gain_calib-LISTA/ # Domain-adaptive gain calibration using LISTA-based models
+│ ├── *.py, *.npy # Core scripts and data for different calibration strategies (JT, PT, PTDA, DDTDA)
+│ ├── generalization/ # Experiments for generalization across unseen gain conditions
+│ │ ├── *.py, *.npy # Models and data for generalization testing
+│ │ └── Results/ # Pretrained weights and visualizations for structured/random gains
+│ ├── random/ # Test data with random gain configurations
+│ └── struc/ # Test data with structured gain configurations
 │
-└── NA-LISTA/                   # Noise-adaptive sparse recovery via LISTA
-    ├── *.py, *.npy             # Core scripts and data for JT, PT, PTDA, DDTDA models
-    ├── broad_SNR/              # Test data covering broad SNR variations
-    ├── narrow_SNR/             # Test data with narrow SNR variations
-    └── generalization/         # Extended test data for generalization across SNR regimes
+└── NA-LISTA/ # Noise-adaptive sparse recovery via LISTA
+├── *.py, *.npy # Core scripts and data for JT, PT, PTDA, DDTDA models
+├── broad_SNR/ # Test data covering broad SNR variations
+├── narrow_SNR/ # Test data with narrow SNR variations
+└── generalization/ # Extended test data for generalization across SNR regimes
 
 Each module contains:
 - `.py` scripts implementing model variants.
