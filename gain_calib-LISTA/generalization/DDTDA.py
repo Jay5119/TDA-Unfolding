@@ -322,7 +322,7 @@ def run_experiment(learning_rate, numEpochs, numLayers, batch_size):
     np.random.seed(seed)
     torch.manual_seed(42)
     A = np.load("A.npy")
-    X = np.load("X_Generalization_big.npy")
+    X = np.load("X_Generalization_big.npy")    ## First run gain_calib-LISTA/generalization/PT.py to save X_Generalization_big.npy
     PHI = np.load("Struct_Gain_Gener_50.npy")
     print("X:", X.shape)
     print("A:", A.shape)
