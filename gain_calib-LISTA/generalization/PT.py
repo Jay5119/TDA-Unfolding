@@ -313,11 +313,12 @@ def run_experiment(learning_rate, numEpochs, numLayers, batch_size):
     #     S[:, i] = sine_vector
     
     # # Matrix multiplication
-    # PHI = S          # Result shape (30, 25)
-    # # np.save(os.path.join(save_path, "Struct_Gain_Gener_50.npy"), PHI)
+    # PHI = S  
+    # np.save(os.path.join(script_dir, "Struct_Gain_Gener_50.npy"), PHI)
+    
     datagenerator = datagen(n,m,sparsity)
     X = datagenerator.generate_sparse_signal(numTrain)
-    np.save(os.path.join(save_path, "X_Generalization_big.npy"), X) # Save the big .npy file
+    np.save(os.path.join(script_dir, "X_Generalization_big.npy"), X) # Save the X_Generalization_big.npy file
     A = np.load("A.npy")
     X = np.load("X_Generalization_big.npy")
     PHI = np.load("Struct_Gain_Gener_50.npy")
