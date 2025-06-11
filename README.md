@@ -35,7 +35,6 @@ TDA-Unfolding/
 │   ├── *.py, *.npy             # Core scripts and data for different calibration strategies (JT, PT, PTDA, DDTDA)
 │   ├── generalization/         # Experiments for generalization across unseen gain conditions
 │   │   ├── *.py, *.npy         # Models and data for generalization testing
-│   │   └── Results/            # Pretrained weights and visualizations for structured/random gains
 │   ├── random/                 # Test data with random gain configurations
 │   └── struc/                  # Test data with structured gain configurations
 │
