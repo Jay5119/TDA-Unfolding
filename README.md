@@ -8,7 +8,7 @@ Department of Electrical Engineering,
 Indian Institute of Technology Bombay, Mumbai, India, 400076
 
 ## Abstract
-
+Machine learning models often struggle to generalize across domains with varying data distributions, such as differing noise levels, leading to degraded performance. Traditional strategies like personalized training, which trains separate models per domain, and joint training, which uses a single model for all domains, have significant limitations in flexibility and effectiveness. To address this, we propose two novel domain adaptation methods for regression tasks based on interpretable unrolled networks—deep architectures inspired by iterative optimization algorithms. These models leverage the functional dependence of select tunable parameters on domain variables, enabling controlled adaptation during inference. Our methods include Parametric Tunable-Domain Adaptation (P-TDA), which uses known domain parameters for dynamic tuning, and Data-Driven Tunable-Domain Adaptation (DD-TDA), which infers domain adaptation directly from input data. We validate our approach on compressed sensing problems involving noise-adaptive sparse signal recovery, domain-adaptive gain calibration, and domain-adaptive phase retrieval, demonstrating improved or comparable performance to domain-specific models while surpassing joint training baselines. This work highlights the potential of unrolled networks for effective, interpretable domain adaptation in regression settings.
 
 
 Our methods include:
@@ -17,23 +17,6 @@ Our methods include:
 
 
 ## Keywords
-`Unrolling`, `LISTA`, `Domain-Adaptation`, `Compressive Sensing`, `Blind-Gain Calibration`, `Model-Based Learning`
+`Unfolding`, `domain-adaptation`, `model-based learning`, `compressive sensing`, `blind-gain calibration`
 
 ## Repository Structure
-### Core Components
-| Component             | Description                                                                 |
-|-----------------------|-----------------------------------------------------------------------------|
-| `A.npy`               | Measurement matrix used in compressed sensing                               |
-| `X.npy`               | Sparse signal representations                                               |
-| `*_test.npy` files    | Test datasets (inputs and outputs) for various domains                      |
-
-### Main Directories
-This repository is organized into two main application modules for tunable domain adaptation using unrolled networks:
-```text
-TDA-Unfolding/
-
-```
-Each module contains:
-- `.py` scripts implementing model variants.
-- `.npy` files for matrices and datasets.
-- Subdirectories with test and generalization data to evaluate robustness.
