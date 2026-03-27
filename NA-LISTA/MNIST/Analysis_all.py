@@ -84,7 +84,7 @@ print(f"Using device: {device} | Seed: {seed}\n")
 # Quick sanity checks on the dataset structure before any filtering or augmentation.
 
 # %%
-is_gen_data = False  # Set to True to regenerate data
+is_gen_data = True  # Set to True to regenerate data
 if is_gen_data:
     SNRs = [-10, -5, 0, 5, 10] ## In dB
     J = len(SNRs)
@@ -416,11 +416,11 @@ print(f"Number of parameters in OCR model: {sum(p.numel() for p in ocr_model.par
 # Training loops reuse the shared dataloaders; learning rates and schedules match the script defaults.
 #%% 
 # Flags for training of each model
-is_train_ptda = False
-is_train_ddtda = False
-is_train_tail_t = False
-is_train_jt = False
-is_train_ddim = False
+is_train_ptda = True
+is_train_ddtda = True
+is_train_tail_t = True
+is_train_jt = True
+is_train_ddim = True
 
 # %%
 if (is_train_ptda or is_train_jt or is_train_ddtda or is_train_tail_t or is_train_ddim):
