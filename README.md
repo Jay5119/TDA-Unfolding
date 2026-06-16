@@ -40,9 +40,13 @@ TDA_Unfolding/
 Department of Electrical Engineering, Indian Institute of Technology Bombay, Mumbai, India.
 
 ## Citation
+
 If you use this code or results in your work, please cite:
 
-```
-<__>
-```
+> Reddy, Snehaa, Jayaprakash Katual, and Satish Mulleti.  
+> **"Tunable Domain Adaptation Using Unfolding."**  
+> *IEEE Transactions on Artificial Intelligence*, 2026.
+
+- **DOI:** [10.1109/TAI.2026.3679328](https://doi.org/10.1109/TAI.2026.3679328)
+- **Supplemental Items:** [10.1109/TAI.2026.3679328/mm1](https://doi.org/10.1109/TAI.2026.3679328/mm1)
 
