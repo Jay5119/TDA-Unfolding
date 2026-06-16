@@ -41,12 +41,10 @@ Department of Electrical Engineering, Indian Institute of Technology Bombay, Mum
 
 ## Citation
 
-If you use this code or results in your work, please cite:
-
-> Reddy, Snehaa, Jayaprakash Katual, and Satish Mulleti.  
-> **"Tunable Domain Adaptation Using Unfolding."**  
-> *IEEE Transactions on Artificial Intelligence*, 2026.
-
+If you use this code or the results obtained using it, please cite:
+```
+S. Reddy, J. Katual, and S. Mulleti, “Tunable Domain Adaptation Using Unfolding,” IEEE Transactions on Artificial Intelligence, 2026.
+```
 - **DOI:** [10.1109/TAI.2026.3679328](https://doi.org/10.1109/TAI.2026.3679328)
 - **Supplemental Items:** [10.1109/TAI.2026.3679328/mm1](https://doi.org/10.1109/TAI.2026.3679328/mm1)
 
